@@ -84,9 +84,24 @@ void Joueur(int** tab, int taille){
         ligne=saisie();
         colonne=saisie();
     }
-    tab[ligne][colonne]='X'
+    tab[ligne][colonne]='X';
 }
 
+void ordi(int** tab, int taille){
+    srand(time(NULL));
+    int ligne;
+    int colonne;
+    ligne=rand()%taille;
+    colonne=rand()%taille;
+    //vérif de l'existance de la case et vérif si la case est bien vide
+    while ((tab[ligne][colonne]!=' ' ))
+    {
+        ligne=rand()%taille;
+        colonne=rand()%taille;
+    }
+    tab[ligne][colonne]='X';
+
+}
 
 int main (int argc, char ** argv){
     int **tab;//pointeur qui contiendra le jeu
