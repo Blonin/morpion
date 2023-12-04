@@ -81,7 +81,9 @@ void Joueur(int** tab, int taille){
     while ((tab[ligne][colonne]!=' ' )|| (ligne<0 && ligne >=taille) || (colonne<0 && colonne>=taille))
     {
         printf("La case sélectionner n'est pas vide ou n'existe pas.\nVeuillez ressaisire une case valide\n");
+        printf("Selectionner la ligne : ");
         ligne=saisie();
+        printf("Selectionner la colonne");
         colonne=saisie();
     }
     tab[ligne][colonne]='X';
@@ -102,6 +104,7 @@ void ordi(int** tab, int taille){
     tab[ligne][colonne]='X';
 
 }
+
 
 int main (int argc, char ** argv){
     int **tab;//pointeur qui contiendra le jeu

@@ -103,7 +103,7 @@ def botMove(gamePlane):
 def minMax(gamePlane, botTurn):
 
     win = gamePlane.isComplete()
-
+    dead = gamePlane
     if win is not None:
         return mapState(win)
 
